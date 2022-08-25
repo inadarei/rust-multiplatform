@@ -1,8 +1,7 @@
 default: build-all
 
 .PHONY: build-all
-build-all: 
-	cargo build --bins
+build-all: mac-arm mac-intel linux-arm linux-intel
 
 # rustup target list. 
 # To remove a previously-added target, rustup target remove.

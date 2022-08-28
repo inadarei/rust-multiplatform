@@ -1,7 +1,10 @@
-default: build-all
+default: do-all
 
-.PHONY: build-all
-build-all: mac-arm mac-intel linux-arm linux-intel
+.PHONY: do-all
+do-all: add-all-targets build-all
+
+.PHONY: build
+build: mac-arm mac-intel linux-arm linux-intel
 
 # rustup target list. 
 # To remove a previously-added target, rustup target remove.
